@@ -1,0 +1,19 @@
+package repositories;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.apiRest.autentication.models.Users;
+
+
+@Repository
+public interface IUsersRepository extends JpaRepository<Users, Long>{
+
+	//Metodo para poder buscar un usuario mediante su nombre
+	Optional<Users> findByUsername(String username);
+	
+	//Metodo para poder verificar si un usuario existe en nuestra BD
+	Boolean existByUsername(String username);
+}
