@@ -11,9 +11,9 @@ import com.apiRest.autentication.models.Users;
 @Repository
 public interface IUsersRepository extends JpaRepository<Users, Long>{
 
-	//Metodo para poder buscar un usuario mediante su nombre
-	Optional<Users> findByUsername(String username);
-	
-	//Metodo para poder verificar si un usuario existe en nuestra BD
-	Boolean existByUsername(String username);
+	//Método para poder buscar un usuario mediante su nombre
+    Optional<Users> findByUsername(String username);
+
+    //Método para poder verificar si un usuario existe en nuestra base de datos
+    Boolean existsByUsername(String username);
 }
